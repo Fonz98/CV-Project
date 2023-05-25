@@ -10,9 +10,9 @@ In more detail, the system to be developed should be able to 1) recognize and lo
 As a case study for the development of the required system, consider a canteen scenario. Although this scenario includes some simplifications (e.g., controlled images acquisition, known weekly menu), the problem of food recognition is still a challenging problem due to the enormous variations in the tray and plate compositions. Moreover, the appearance of the same dish may change depending on how it is placed on the plate.
 
 The system to be developed should be robust to all such conditions. In particular:
-  ● it should recognize all the food on the tray, even food items that are not on a plate (e.g., fruit, bread);
-  ● it should ignore any non-food object on the tray (e.g., smartphone, badge);
-  ● it should segment different food placed on the same plate.
+  1) it should recognize all the food on the tray, even food items that are not on a plate (e.g., fruit, bread);
+  2) it should ignore any non-food object on the tray (e.g., smartphone, badge);
+  3) it should segment different food placed on the same plate.
 
 To assess the robustness of your system a benchmark dataset with annotations is provided at the following link:
 https://drive.google.com/drive/folders/1oTsvFwypHQ6PGV_VujG4LMvJA_Zrdt8Z?usp=share_link
@@ -32,9 +32,9 @@ For measuring the system performance, you should have a look and understand the 
   • The mean Intersection over Union (mIoU) - https://towardsdatascience.com/metrics-to-evaluate-your- semantic-segmentation-model-     6bcb99639aa2
  
 Such metrics shall be used to evaluate the food recognition system as follows:
-  ● For food localization, the mean Average Precision (mAP) calculated at IoU threshold 0.5;
-  ● For food segmentation, the mean Intersection over Union (mIoU) metric, that is the average of the IoU computed for each food item;
-  ● For food leftover estimation, the quantity of food leftover estimated by your algorithm and the difference between your estimated       quantity of food leftover and the quantity computed from the annotations; the quantity of food leftover is defined as the ratio 𝑅𝑖       (in terms of pixels) between the segmentation mask in the “after” image and the segmentation mask in the “before” image:
+  1) For food localization, the mean Average Precision (mAP) calculated at IoU threshold 0.5;
+  2) For food segmentation, the mean Intersection over Union (mIoU) metric, that is the average of the IoU computed for each food item;
+  3) For food leftover estimation, the quantity of food leftover estimated by your algorithm and the difference between your estimated       quantity of food leftover and the quantity computed from the annotations; the quantity of food leftover is defined as the ratio 𝑅𝑖       (in terms of pixels) between the segmentation mask in the “after” image and the segmentation mask in the “before” image:
                     𝑅𝑖 = #𝑝𝑖𝑥𝑒𝑙𝑠 𝑓𝑜𝑟 𝑓𝑜𝑜𝑑 𝑖 𝑖𝑛 𝑡h𝑒 "𝑎𝑓𝑡𝑒𝑟" / 𝑖𝑚𝑎𝑔𝑒 #𝑝𝑖𝑥𝑒𝑙𝑠 𝑓𝑜𝑟 𝑓𝑜𝑜𝑑 𝑖 𝑖𝑛 𝑡h𝑒 "𝑏𝑒𝑓𝑜𝑟𝑒" 𝑖𝑚𝑎𝑔𝑒
                     
 For food localization and food segmentation you need to evaluate your system on the “before” images and the images for difficulties 1) and 2) of each provided tray in the dataset. For food leftover estimation, you need to evaluate your system on each pair of “before” and “after” images considering all difficulties levels.
@@ -42,8 +42,8 @@ For food localization and food segmentation you need to evaluate your system on 
 The metrics mentioned above need to compare the output of your system against the ground truth, namely what is considered “the truth” for each output image. Ground truth annotations are already included in the dataset provided for the final evaluation of your system.
 
 The ground truth is usually stored in a set of files, one file for each input image. The information representing the ground truth (e.g., the rectangle enclosing the food item or the pixels belonging to each food item in the image) is expressed in such a file based on a standard that you can define (and you should describe in the report). Such standard might be extremely simple, for example the provided benchmark dataset uses the following conventions:
-  ● For food detection: every food item is found inside a rectangle defined by 4 parameters [x, y, width, height], where (x,y) are the       top-left corner coordinates and width and height are the bounding box main dimensions; such parameters are listed in a row, one food    item per row; each row contains also an additional parameter which describes the food category ID;
-  ● For food segmentation: a grayscale mask where each pixel is assigned with a food category ID;
+  1) For food detection: every food item is found inside a rectangle defined by 4 parameters [x, y, width, height], where (x,y) are the      top-left corner coordinates and width and height are the bounding box main dimensions; such parameters are listed in a row, one          food item per row; each row contains also an additional parameter which describes the food category ID;
+  2) For food segmentation: a grayscale mask where each pixel is assigned with a food category ID;
   
 As references, the images in the benchmark dataset provided have been acquired at the Piovego canteen in Padova. Feel free to add more test images, taken from the internet or acquired using your camera. In case you use additional images for the development of your system, you must include those images and related annotations (or a link to them) in your final delivery.
 
@@ -53,9 +53,9 @@ If you use additional images, you are free to define your own standard. If you a
 The project must be developed in C++ with the OpenCV library. The only allowed exception is the usage of Python code for the deep learning part if you decide to exploit this family of techniques. The project cannot be developed using machine learning / deep learning only.
 
 You need to deliver your project including:
-  ● All the source code (both C++ and Python);
-  ● CMake configuration files (the use of CMake is mandatory);
-  ● A report (no page limit) presenting your approach and the performance measurement on the dataset provided and linked above. You         shall report the metrics and the output images for every element in the dataset.
+  1) All the source code (both C++ and Python);
+  2) CMake configuration files (the use of CMake is mandatory);
+  3) A report (no page limit) presenting your approach and the performance measurement on the dataset provided and linked above. You         shall report the metrics and the output images for every element in the dataset.
   
 When delivering your project, you should clearly identify the contribution of each member in terms of ideas, implementation, tests and performance measurement. You can organize the work as you prefer: you are not forced to assign one specific step to each group member. Please also include the number of working hours per person in the report. This is needed for a monitoring on our side on the effort requested – the evaluation will not depend at all on the number of working hours, but on the quality of the result.
 
