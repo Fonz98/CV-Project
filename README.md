@@ -30,8 +30,8 @@ The benchmark dataset contains 3 “after” images for each tray, categorized b
 **Performance measurement**
 
 For measuring the system performance, you should have a look and understand the following metrics:
-  1) The mean Average Precision (mAP) - https://learnopencv.com/mean-average-precision-map-object- detection-model-evaluation-metric/
-  2) The mean Intersection over Union (mIoU) - https://towardsdatascience.com/metrics-to-evaluate-your- semantic-segmentation-model-     6bcb99639aa2
+  1) The mean Average Precision (mAP) - https://learnopencv.com/mean-average-precision-map-object-detection-model-evaluation-metric/
+  2) The mean Intersection over Union (mIoU) - https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-     6bcb99639aa2
  
 Such metrics shall be used to evaluate the food recognition system as follows:
   1) For food localization, the mean Average Precision (mAP) calculated at IoU threshold 0.5;
