@@ -1,6 +1,7 @@
 Final project for Computer Vision course @UniPD
 
 **Introduction**
+
 Food waste is an important problem in today's society, with several negative impacts such as waste of valuable food, waste of natural resources used to produce it and the cost of organic waste management. Once prepared, food is often not fully consumed leading to a large amount of wasted resources very evident especially in work and school canteen settings. Some of the main causes are lack of culture of respect for food, over-ordering of food, and lack of attention to portions by the canteen staff. By introducing a system for scanning the consumer's tray at the end of the meal, food leftovers could be analyzed to discourage waste and monitor consumers' habits.
 
 The goal of this project is to develop a computer vision system capable of scanning a canteen consumer's food tray at the end of a meal to estimate the amount of leftovers for each type of food. Such a system must be able to analyze pairs of images: one of the tray before the meal and one of the tray at the end of the meal. From the first image, the system will recognize the various types of food ordered, keeping track of the initial quantity of each food; at the end of the meal, the system must analyze a new image of the tray, recognizing which types of food are still present and in what quantity.
@@ -27,6 +28,7 @@ The benchmark dataset contains 3 “after” images for each tray, categorized b
      minimal leftover food.
 
 **Performance measurement**
+
 For measuring the system performance, you should have a look and understand the following metrics:
   • The mean Average Precision (mAP) - https://learnopencv.com/mean-average-precision-map-object- detection-model-evaluation-metric/
   • The mean Intersection over Union (mIoU) - https://towardsdatascience.com/metrics-to-evaluate-your- semantic-segmentation-model-     6bcb99639aa2
@@ -50,6 +52,7 @@ As references, the images in the benchmark dataset provided have been acquired a
 If you use additional images, you are free to define your own standard. If you agree with other groups to share the ground truth collection, be sure to share the standard. The organization of the ground truth collection is completely free; if you wish, you can use the dedicated section in the moodle forum.
 
 **Project delivery**
+
 The project must be developed in C++ with the OpenCV library. The only allowed exception is the usage of Python code for the deep learning part if you decide to exploit this family of techniques. The project cannot be developed using machine learning / deep learning only.
 
 You need to deliver your project including:
