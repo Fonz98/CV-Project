@@ -1,0 +1,32 @@
+* Food categories.
+
+0. Background
+
+1. pasta with pesto
+2. pasta with tomato sauce
+3. pasta with meat sauce
+4. pasta with clams and mussels
+5. pilaw rice with peppers and peas
+
+6. grilled pork cutlet
+7. fish cutlet
+8. rabbit
+9. seafood salad
+
+10. beans
+11. basil potatoes
+12. salad
+13. bread
+
+
+* Tray composition.
+
+tray1: pesto pasta, grilled pork cutlet, beans
+tray2: pasta with tomato sauce, fish cutlet, basil potatoes, salad
+tray3: tomato pasta, rabbit, salad
+tray4: pilaw rice with peppers and peas, fish cutlet, basil potatoes, salad, bread
+tray5: pasta with meat sauce, rabbit, beans, bread
+tray6: clam and mussel stir-fry, grilled pork chop, beans, salad
+tray7: pasta with clams and mussels, fish cutlet, basil potatoes, salad
+tray8: pasta with clams and mussels, seafood salad, basil potatoes, beans, salad
+
